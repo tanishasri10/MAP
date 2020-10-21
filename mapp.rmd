@@ -1,0 +1,27 @@
+---
+title: "MAP"
+author: "Tanisha Srivastava"
+date: "21/10/2020"
+output:
+  html_document: default
+  pdf_document: default
+  word_document: default
+---
+
+```{r setup, include=FALSE}
+library(leaflet)
+```
+
+## Introduction
+Here is the location of the highest mountain in the world. Mt. Everest at 8848m.
+
+```{r}
+my_map <- leaflet() %>%
+        addTiles
+my_map <- my_map %>%
+        addMarkers(lat=27.9878, lng=86.9250,
+                   popup="Mt.Everest")
+my_map
+```
+
+
